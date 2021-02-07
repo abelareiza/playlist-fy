@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+
 import SearchBar from '../SearchBar/SearchBar.js';
 import SearchResults from '../SearchResults/SearchResults.js';
 import Playlist from '../Playlist/Playlist.js';
@@ -43,12 +44,14 @@ class App extends React.Component {
 
   savePlaylist() {
     const trackUris = this.state.playlistTracks.map(track => track.uri);
-    Spotify.savePlaylist(this.state.playlistName, trackUris).then(() => {
-      this.setState({
-        playlistName: 'New Playlist',
-        playlistTracks: []
+    if (typeof trackUris != "undefined" && trackUris != null && trackUris.length != null && trackUris.length > 0) {
+      Spotify.savePlaylist(this.state.playlistName, trackUris).then(() => {
+        this.setState({
+          playlistName: 'New Playlist',
+          playlistTracks: []
+        });
       });
-    });
+    }
   }
 
   search(term) {
@@ -57,10 +60,14 @@ class App extends React.Component {
     });
   }
 
+  componentDidMount() {
+    window.addEventListener('load', () => { Spotify.getAccessToken() });
+  }
+
   render() {
     return (
       <div>
-        <h1>Ja<span className="highlight">mmm</span>ing</h1>
+        <h1>Playlist-fy</h1>
         <div className="App">
           <SearchBar onSearch={this.search} />
           <div className="App-playlist">
@@ -73,6 +80,21 @@ class App extends React.Component {
             />
           </div>
         </div>
+        <footer>
+          <section className="left">
+            <img src="./assets/images/spotify.svg" alt="logo" />
+          </section>
+          <section className="center">
+            <p>Developed by Abel Areiza</p>
+          </section>
+          <section className="right">
+            <ul>
+              <li><a className="github-link" href="https://github.com/abelareiza">GitHub</a></li>
+              <li><a className="linkedin-link" href="https://www.linkedin.com/in/abel-areiza/">LinkedIn</a></li>
+              <li><a className="twitter-link" href="https://twitter.com/Enjuavel">Twitter</a></li>
+            </ul>
+          </section>
+        </footer>
       </div>
     )
   }
