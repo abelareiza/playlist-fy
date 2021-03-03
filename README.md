@@ -4,6 +4,6 @@
 
 This project was made for fun and to apply some React JS concepts.
 
-Skills: REACT / JS / HTML / CSS
+Technologies used for this project: HTML / CSS / JS / React ⚛
 
 [<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/github.svg' alt='github' height='40'>](https://github.com/abelareiza)  [<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/linkedin.svg' alt='linkedin' height='40'>](https://www.linkedin.com/in/https://www.linkedin.com/in/abel-areiza//)  [<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/twitter.svg' alt='twitter' height='40'>](https://twitter.com/https://twitter.com/Enjuavel)  
