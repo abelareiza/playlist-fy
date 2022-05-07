@@ -1,6 +1,6 @@
 ### Playlist-fy 🎧
 #### Playlist-fy is a React App that let you add your favorite music directly to your Spotify library
-#### You can try it right now in https://playlist-fy.surge.sh
+#### You can try it right now at https://playlist-fy.surge.sh
 
 ![Playlist-fy is a React App that let you add your favorite music directly into your Spotify library](https://github.com/abelareiza/playlist-fy/blob/master/playlist-fy_mockup.png)
 
